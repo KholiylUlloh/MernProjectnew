@@ -1,5 +1,8 @@
-const { Router } = require('express')
+const { Router } = require('express');
+const User = require('../models/user');
 const router = Router()
+const user = User
+
 
 
 router.post('/signup',(req, res) => {
