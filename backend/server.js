@@ -13,7 +13,8 @@ app.use(express.urlencoded({extended: false}))
 app.listen(3002, () => console.log('Server listening on Port: 3002'))
 
 
-app.use('/api', require('./routes/signUp'))
+
+app.use('/api', require('./routes/routes'))
 // app.get('/api', (req, res) => {
 //     res.json({
 //         message: 'success',

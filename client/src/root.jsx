@@ -1,16 +1,16 @@
-import React, { useEffect, useState} from 'react'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Login from './components/login'
+import SignUp from './components/signUp'
 
 const Root = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(()=> {
-    fetch('/api')
-    .then(res => res.json())
-    .then(data => setData(data.data))
-  }, []);
   return (
     <div>
-      <h1>{!data ? "loading" : data}</h1>
+      <Routes>
+        <Route path='/' element={<h1>Home</h1>} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
     </div>
   )
 }
